@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   module: {
     rules: [
@@ -27,6 +29,12 @@ module.exports = {
           { loader: 'css-loader' }
         ]
       }
-    ]
+    ],
+      plugins: [
+          new webpack.ProvidePlugin({
+              $: 'jquery',
+              jQuery: 'jquery'
+          })
+      ]
   }
 }
