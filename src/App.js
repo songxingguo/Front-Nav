@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header.js'
+import Sider from './components/Sider.js'
+import CardList from './components/CardList.js'
+import { Container, Row, Col } from 'reactstrap';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Hello React！！</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="mt25">
+        <Header />
+        <Row className="mt30">
+          <Col xs="3">
+            <Sider />
+          </Col>
+          <Col xs="8">
+            <CardList />
+          </Col>
+        </Row>
       </div>
     );
   }
